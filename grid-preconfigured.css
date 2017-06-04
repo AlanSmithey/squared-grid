@@ -1,0 +1,170 @@
+/*-----------------------*
+  #GRID
+ *-----------------------*/
+html {
+  height : 100%; // for full document height
+}
+
+body {
+  display    : flex;
+  flex-flow  : column nowrap;
+  min-width  : 300px;
+  max-width  : 1200px;
+  min-height : 100%; // body min height equal document height
+  margin     : 0 auto; // horizontal centering
+}
+
+main {
+  flex : 1; // maximize height of content on short page and put footer on bottom
+}
+
+/*-----------------------*
+  #ROW
+ *-----------------------*/
+[class*='row__flow'] {
+  display : flex;
+  width   : 100%;
+}
+
+.row__flow-1 {
+  flex-flow : row wrap;
+}
+
+.row__flow-2 {
+  flex-flow : row-reverse wrap;
+}
+
+.row__flow-3 {
+  flex-flow : row wrap-reverse;
+}
+
+.row__flow-4 {
+  flex-flow : row-reverse wrap-reverse;
+}
+
+.row__padding-s {
+  padding : 10px;
+}
+
+/*-----------------------*
+  #CONTAINER
+ *-----------------------*/
+.container {
+  width : 100%;
+}
+
+/*-----------------------*
+  #COL
+ *-----------------------*/
+[class*='col__align'] {
+  display : flex;
+}
+
+.col__align-1,
+.col__align-2,
+.col__align-3 {
+  align-items : flex-start;
+}
+
+.col__align-4,
+.col__align-5,
+.col__align-6 {
+  align-items : center;
+}
+
+.col__align-7,
+.col__align-8,
+.col__align-9 {
+  align-items : flex-end;
+}
+
+.col__align-1,
+.col__align-4,
+.col__align-7 {
+  justify-content : flex-start;
+}
+
+.col__align-2,
+.col__align-5,
+.col__align-8 {
+  justify-content : center;
+}
+
+.col__align-3,
+.col__align-6,
+.col__align-9 {
+  justify-content : flex-end;
+}
+
+.col__padding-s {
+  padding : 10px;
+}
+
+.col__padding-m {
+  padding : 20px;
+}
+
+/*-----------------------*
+  #PHONE
+ *-----------------------*/
+@media (min-width : 300px) and (max-width : 599px) {
+
+  .row__squared > [class*='col__align'] {
+    min-height : 100vw;
+  }
+
+  [class*='row__cols'] > [class*='col__align'] {
+    width : 100%;
+  }
+}
+
+/*-----------------------*
+  #PAD
+ *-----------------------*/
+@media (min-width : 600px) and (max-width : 899px) {
+
+  .row__squared > [class*='col__align'] {
+    min-height : 50vw;
+  }
+
+  .row__cols-1 > [class*='col__align'] {
+    width : 100%;
+  }
+
+  .row__cols-2 > [class*='col__align'],
+  .row__cols-3 > [class*='col__align'] {
+    width : 50%;
+  }
+}
+
+/*-----------------------*
+  #DESKTOP
+ *-----------------------*/
+@media (min-width : 900px) {
+
+  .row__squared > [class*='col__align'] {
+    min-height : 50vw;
+  }
+
+  .row__cols-1 > [class*='col__align'] {
+    width : 100%;
+  }
+
+  .row__cols-2 > [class*='col__align'] {
+    width : 50%;
+  }
+
+  .row__cols-3 > [class*='col__align'] {
+    width : 33.33%;
+  }
+}
+
+/*-----------------------*
+  #DESKTOP MAX
+ *-----------------------*/
+@media (min-width : 1200px) {
+
+  .row__squared > [class*='col__align'] {
+    min-height : 600px;
+  }
+}
