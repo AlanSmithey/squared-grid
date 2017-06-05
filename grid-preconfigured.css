@@ -43,7 +43,7 @@ main {
 }
 
 .row__padding-s {
-  padding : 10px;
+  padding : 5px;
 }
 
 /*-----------------------*
@@ -97,11 +97,11 @@ main {
 }
 
 .col__padding-s {
-  padding : 10px;
+  padding : 5px;
 }
 
 .col__padding-m {
-  padding : 20px;
+  padding : 10px;
 }
 
 /*-----------------------*
